@@ -8,8 +8,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "lodash": "4.17.4",
     "react": "16.0.0-beta.5",
-    "react-native": "0.49.3"
+    "react-native": "0.49.3",
+    "react-navigation": "1.0.0-beta.13",
+    "react-redux": "5.0.6",
+    "redux": "3.7.2",
+    "redux-devtools-extension": "2.13.2",
+    "redux-thunk": "2.2.0"
   },
   "devDependencies": {
     "babel-jest": "21.2.0",
