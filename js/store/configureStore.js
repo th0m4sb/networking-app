@@ -1,13 +1,12 @@
 'use strict';
 
-import { AsyncStorage } from 'react-native';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import reducers from '../reducers';
 
-export default function configureStore(onComplete) {
+export default function configureStore() {
   const store = createStore(
     reducers,
     undefined,
