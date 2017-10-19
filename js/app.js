@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import { injectIntl } from 'react-intl';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -19,12 +20,13 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component<{}> {
+class App extends Component<{}> {
   render() {
+    const {intl} = this.props;
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          { intl.formatMessage({ id : 'app.title' }) }
         </Text>
         <Text style={styles.instructions}>
           To get started, edit App.js
@@ -55,3 +57,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+export default injectIntl(App);
